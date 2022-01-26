@@ -17,4 +17,4 @@ This is my website/blog/portfolio with some inspiration taken from [Lee Robinson
 
 ## Cloning / Forking
 
-Please review [license](https://github.com/rcrozean/rcrozean.com/LICNESE.txt) and remove my personal info.
+Please review [license](https://github.com/rcrozean/rcrozean.com/blob/main/LICNESE.txt) and remove my personal info.
