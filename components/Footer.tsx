@@ -12,13 +12,12 @@ const ExternalLink = ({ href, children }) => {
 
 export default function Footer() {
   return (
-    <footer>
-      <hr />
-      <NowPlaying />
+    <footer className="flex flex-col justify-center items-start">
+      <hr className="w-full boarder-1 border-gray-200 mb-8" />
       <div>
-        <div>
+        <div className="w-full max-2-2xl grid grid-cols-1">
           <Link href="/">
-            <a>Home</a>
+            <a className="test-gray-500 hover:text-gray-600 transition">Home</a>
           </Link>
           <Link href="/about">
             <a>About</a>
