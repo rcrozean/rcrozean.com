@@ -1,20 +1,27 @@
-# RCRozean.com
+# Next.js + Tailwind CSS Example
 
-- Framework: Next.js
-- Database: MongoDB
-- Authentication: NextAuth.js
-- Deployment: Vercel
-- Content: MDX
-- Styling: Tailwind CSS
+This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
-## Find out more
+## Preview
 
-Additional information and walkthrough on how I built and deployed my website can be found in this [post](https://rcrozean.com/blog/post/building-this-site).
+Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-This is my website/blog/portfolio with some inspiration taken from [Lee Robinson](https://leerob.io), and [Josh W. Comeau](https://www.joshwcomeau.com/blog/how-i-built-my-blog/).
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
-## Overview
+## Deploy your own
 
-## Cloning / Forking
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-Please review [license](https://github.com/rcrozean/rcrozean.com/blob/main/LICNESE.txt) and remove my personal info.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+
+## How to use
+
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+
+```bash
+npx create-next-app --example with-tailwindcss with-tailwindcss-app
+# or
+yarn create next-app --example with-tailwindcss with-tailwindcss-app
+```
+
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).

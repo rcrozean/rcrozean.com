@@ -1,8 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Head from 'next/head';
 
 import Container from '../components/Container';
 
-export default function Home({ videos }) {
-  return <Container></Container>;
+export default function Home() {
+  return <Container>Test</Container>;
 }
