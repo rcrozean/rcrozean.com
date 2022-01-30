@@ -1,24 +1,12 @@
 @tailwind base;
 @tailwind components;
+
+.page {
+  @apply mx-auto mb-8 w-full max-w-2xl flex-col items-start justify-center pb-16;
+}
+
+.footer-link {
+  @apply text-gray-300 hover:text-gray-600;
+}
+
 @tailwind utilities;
-
-.skip-nav {
-  @apply absolute -left-1/4 -top-8 -translate-y-12 transform px-4 py-3 transition-transform duration-200 focus:top-4 focus:translate-y-3;
-}
-
-#skip {
-  scroll-margin-top: 1.125rem;
-}
-
-/* https://seek-oss.github.io/capsize/ */
-.capsize::before {
-  content: '';
-  margin-bottom: -0.098em;
-  display: table;
-}
-
-.capsize::after {
-  content: '';
-  margin-top: -0.219em;
-  display: table;
-}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const ExternalLink = ({ href, children }) => (
   <a
-    className="text-gray-500 transition hover:text-gray-600"
+    className="footer-link"
     target="_blank"
     rel="noopener noreferrer"
     href={href}
@@ -13,43 +13,38 @@ const ExternalLink = ({ href, children }) => (
 
 export default function Footer() {
   return (
-    <footer>
-      <hr />
+    <footer className="page">
+      <hr className="border-1 mb-8 w-full" />
       <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
-        <div className="flex flex-col space-y-4">
+        <div className="grid space-y-4">
           <Link href="/">
-            <a className="text-gray-500 transition hover:text-gray-600">Home</a>
+            <a className="footer-link">Home</a>
           </Link>
           <Link href="/about">
-            <a className="text-gray-500 transition hover:text-gray-600">
-              About
-            </a>
+            <a className="footer-link">About</a>
           </Link>
           <Link href="/contact">
-            <a className="text-gray-500 transition hover:text-gray-600">
-              Contact
-            </a>
+            <a className="footer-link">Contact</a>
           </Link>
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="grid space-y-4">
           <ExternalLink href="https://twitter.com/rcrozean">
             Twitter
           </ExternalLink>
           <ExternalLink href="https://github.com/rcrozean">GitHub</ExternalLink>
+          <ExternalLink href="https://linkedin.com/in/randolph-rozean">
+            LinkedIn
+          </ExternalLink>
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="grid space-y-4">
           <Link href="/guestbook">
-            <a className="text-gray-500 transition hover:text-gray-600">
-              Guestbook
-            </a>
+            <a className="footer-link">Guestbook</a>
           </Link>
           <Link href="/dashboard">
-            <a className="text-gray-500 transition hover:text-gray-600">
-              Dashboard
-            </a>
+            <a className="footer-link">Dashboard</a>
           </Link>
           <Link href="/blog">
-            <a className="text-gray-500 transition hover:text-gray-600">Blog</a>
+            <a className="footer-link">Blog</a>
           </Link>
         </div>
       </div>
