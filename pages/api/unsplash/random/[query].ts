@@ -7,7 +7,8 @@ export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse,
 ) {
-    const photo = await unsplash.photos.getRandom({ query: "lost" });
+    const { query } = req;
+    const photo = await unsplash.photos.getRandom({ query: { query }, orientation: 'portrait' });
 
     res.setHeader('Cache-Control',
     'public, s-maxage=1200, stale-while-revalidate=600');

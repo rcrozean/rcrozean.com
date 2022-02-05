@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <Container title="404 - RC Rozean">
       <div className="page">
-        <div className="flex-col-2 = flex">
+        <div className="flex-col-2 flex">
           <div className="w-full">
             <h1>404 - Page Not Found</h1>
             <hr />
@@ -18,9 +18,7 @@ export default function NotFound() {
               ready.
             </p>
           </div>
-          <div className="w-full">
-            <UnsplashCard />
-          </div>
+          <div className="w-full"></div>
         </div>
       </div>
     </Container>

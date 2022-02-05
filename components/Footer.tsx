@@ -1,31 +1,33 @@
 import Link from 'next/link';
 
-const ExternalLink = ({ href, children }) => (
-  <a
-    className="footer-link"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
+import ExternalLink from './ExternalLink';
 
 export default function Footer() {
   return (
     <footer className="page">
       <hr className="border-1 mb-8 w-full" />
-      <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
+      <div className="grid w-full max-w-2xl grid-cols-1 gap-36 pb-16 sm:grid-cols-3">
         <div className="grid space-y-4">
-          <Link href="/">
-            <a className="footer-link">Home</a>
-          </Link>
-          <Link href="/about">
-            <a className="footer-link">About</a>
-          </Link>
-          <Link href="/contact">
-            <a className="footer-link">Contact</a>
-          </Link>
+          {[
+            ['Home', '/'],
+            ['About', '/about'],
+            ['Contact', '/contact']
+          ].map(([title, url]) => (
+            <Link href={url}>
+              <a className="">{title}</a>
+            </Link>
+          ))}
+        </div>
+        <div className="grid space-y-4">
+          {[
+            ['Guestbook', '/guestbook'],
+            ['Dashboard', '/dashboard'],
+            ['Blog', '/blog']
+          ].map(([title, url]) => (
+            <Link href={url}>
+              <a className="">{title}</a>
+            </Link>
+          ))}
         </div>
         <div className="grid space-y-4">
           <ExternalLink href="https://twitter.com/rcrozean">
@@ -35,17 +37,6 @@ export default function Footer() {
           <ExternalLink href="https://linkedin.com/in/randolph-rozean">
             LinkedIn
           </ExternalLink>
-        </div>
-        <div className="grid space-y-4">
-          <Link href="/guestbook">
-            <a className="footer-link">Guestbook</a>
-          </Link>
-          <Link href="/dashboard">
-            <a className="footer-link">Dashboard</a>
-          </Link>
-          <Link href="/blog">
-            <a className="footer-link">Blog</a>
-          </Link>
         </div>
       </div>
     </footer>

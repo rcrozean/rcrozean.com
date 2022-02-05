@@ -2,11 +2,7 @@
 @tailwind components;
 
 .page {
-  @apply mx-auto mb-8 w-full max-w-2xl flex-col items-start justify-center pb-16;
-}
-
-.footer-link {
-  @apply text-gray-300 hover:text-gray-600;
+  @apply mx-auto mb-8 w-full max-w-4xl flex-col items-start justify-center pb-6;
 }
 
 @tailwind utilities;

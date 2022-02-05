@@ -10,6 +10,12 @@ export type FormState = {
     message?: string;
 };
 
+export type UnsplashProps = {
+    random?: boolean;
+    photoId?: string;
+    topic?: string;
+}
+
 export type UnsplashPhoto = {
     id: number;
     width: number;
