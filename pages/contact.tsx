@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Contact() {
   return (
     <Container title="RC Rozean - Contact">
-      <div className="page">
+      <div className="mx-auto mb-8 w-full max-w-4xl flex-col items-start justify-center pb-8">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
@@ -76,18 +76,18 @@ export default function Contact() {
                   <div className="grid grid-cols-2 gap-6">
                     <div className="col-span-2 sm:col-span-1">
                       <label
-                        htmlFor="contact-last-name"
+                        htmlFor="contact-first-name"
                         className="block text-sm font-medium"
                       >
-                        Last Name
+                        First Name
                       </label>
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input
                           type="text"
-                          name="contact-last-name"
-                          id="contact-last-name"
+                          name="contact-first-name"
+                          id="contact-first-name"
                           className="block w-full flex-1 rounded sm:text-sm"
-                          placeholder="Rozean"
+                          placeholder="First Name"
                         />
                       </div>
                     </div>
@@ -104,7 +104,7 @@ export default function Contact() {
                           name="contact-last-name"
                           id="contact-last-name"
                           className="block w-full flex-1 rounded sm:text-sm"
-                          placeholder="Rozean"
+                          placeholder="Last Name"
                         />
                       </div>
                     </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                           name="contact-company-name"
                           id="contact-company-name"
                           className="block w-full flex-1 rounded sm:text-sm"
-                          placeholder=""
+                          placeholder="(Optional)"
                         />
                       </div>
                     </div>
@@ -141,7 +141,7 @@ export default function Contact() {
                           name="contact-email"
                           id="contact-email"
                           className="block w-full flex-1 rounded sm:text-sm"
-                          placeholder="Rozean"
+                          placeholder="example@example.com"
                         />
                       </div>
                     </div>

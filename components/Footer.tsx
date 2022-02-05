@@ -4,16 +4,16 @@ import ExternalLink from './ExternalLink';
 
 export default function Footer() {
   return (
-    <footer className="page">
+    <footer className="mx-auto mb-8 w-full max-w-4xl flex-col items-start justify-center">
       <hr className="border-1 mb-8 w-full" />
-      <div className="grid w-full max-w-2xl grid-cols-1 gap-36 pb-16 sm:grid-cols-3">
+      <div className="grid w-full max-w-2xl gap-4 pb-16 sm:grid-cols-3 sm:gap-36">
         <div className="grid space-y-4">
           {[
             ['Home', '/'],
             ['About', '/about'],
             ['Contact', '/contact']
           ].map(([title, url]) => (
-            <Link href={url}>
+            <Link href={url} key={title}>
               <a className="">{title}</a>
             </Link>
           ))}
@@ -24,7 +24,7 @@ export default function Footer() {
             ['Dashboard', '/dashboard'],
             ['Blog', '/blog']
           ].map(([title, url]) => (
-            <Link href={url}>
+            <Link href={url} key={title}>
               <a className="">{title}</a>
             </Link>
           ))}
