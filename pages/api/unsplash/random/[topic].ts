@@ -3,13 +3,14 @@ import { createApi } from 'unsplash-js';
 
 const unsplash = createApi({ accessKey: process.env.UNSPLASH_ACCESS_KEY });
 
-export default async function imageHandler (
+export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse,
 ) {
-    const { id } = req.query;
-    if(typeof id === "string") {
-        let photo = await unsplash.photos.get({ photoId: id });
+    const { topic } = req.query;
+    if(typeof topic === "string") {
+        const photo = await unsplash.photos.getRandom({ query: topic, orientation: 'portrait' });
+
         res.setHeader('Cache-Control',
         'public, s-maxage=1200, stale-while-revalidate=600');
 
