@@ -8,10 +8,13 @@ export default async function imageHandler (
     res: NextApiResponse,
 ) {
     const { id } = req.query;
-    const photo = await unsplash.photos.get({ photoId: id });
+    if(typeof id === "string") {
+        let photo = await unsplash.photos.get({ photoId: id });
+        res.setHeader('Cache-Control',
+        'public, s-maxage=1200, stale-while-revalidate=600');
 
-    res.setHeader('Cache-Control',
-    'public, s-maxage=1200, stale-while-revalidate=600');
+        return res.status(200).json(photo.response);
+    }
 
-    return res.status(200).json(photo.response);
+    return res.status(200).json("Object type not allowed in Unsplash API")
 }
