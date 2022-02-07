@@ -1,8 +1,3 @@
 @tailwind base;
 @tailwind components;
-
-.page {
-  @apply mx-auto mb-8 w-full max-w-4xl flex-col items-start justify-center pb-6;
-}
-
 @tailwind utilities;

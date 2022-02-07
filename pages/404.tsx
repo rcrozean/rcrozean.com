@@ -6,7 +6,7 @@ import UnsplashCard from 'components/Unsplash';
 export default function NotFound() {
   return (
     <Container title="404 - RC Rozean">
-      <div className="page">
+      <div className="mx-auto mb-8 w-full max-w-4xl flex-col items-start justify-center pb-8">
         <div className="flex-col-2 flex">
           <div className="w-full">
             <h1>404 - Page Not Found</h1>

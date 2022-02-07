@@ -1,3 +1,5 @@
+import BlogPostCard from 'components/BlogPostCard';
+import GitHubCard from 'components/GitHubCard';
 import UnsplashCard from 'components/Unsplash';
 import Head from 'next/head';
 
@@ -6,10 +8,21 @@ import Container from '../components/Container';
 export default function Home() {
   return (
     <Container>
-      <div className="page">
+      <div className="mx-auto mb-8 w-full max-w-4xl flex-col items-start justify-center pb-8">
         <div>Randolph "Cameron" Rozean</div>
-        <div>Featured Blog Posts</div>
-        <div>GitHub Projects</div>
+        <hr />
+        <div className="pb-4">
+          <h1>Featured Blog Posts</h1>
+          <BlogPostCard />
+        </div>
+        <div className="pb-4">
+          <h1>Recent Blog Posts</h1>
+          <BlogPostCard />
+        </div>
+        <div className="pb-4">
+          <h1>GitHub Projects</h1>
+          <GitHubCard />
+        </div>
       </div>
     </Container>
   );
