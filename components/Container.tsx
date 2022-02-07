@@ -16,7 +16,7 @@ function NavItem({ href, text }) {
       <a
         className={cn(
           isActive ? 'font-semibold' : 'font-normal',
-          'hidden rounded-lg p-2 sm:px-3 sm:py-2 md:inline-block'
+          'rounded-lg p-2 sm:px-3 sm:py-2 md:inline-block'
         )}
       >
         <span className="">{text}</span>
@@ -67,12 +67,12 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="">
-        <nav className="">
+      <div className="flex flex-col justify-center px-8">
+        <nav className="relative mx-auto flex w-full max-w-4xl items-center justify-center pt-8 pb-8 sm:pb-16">
           <a href="#skip" className="hidden">
             Skip to Content
           </a>
-          <div className="flex justify-center">
+          <div className="">
             <NavItem href="/" text="Home" />
             <NavItem href="/about" text="About" />
             <NavItem href="/blog" text="Blog" />
@@ -82,7 +82,7 @@ export default function Container(props) {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 ring-gray-300  transition-all hover:ring-2  dark:bg-gray-600"
+            className="flex h-9 w-9 items-center justify-center rounded-lg transition-all hover:ring-2"
             onClick={() =>
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }

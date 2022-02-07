@@ -10,6 +10,29 @@ export type FormState = {
     message?: string;
 };
 
+export type GitHub = {
+    user: {
+        login: string;
+        id: number;
+        avatar_url: string;
+        html_url: string;
+    };
+    mine: [{ id: number;
+             name: string
+             description?: string;
+          }];
+    oss: [{ id: number;
+            name: string
+            description?: string;
+         }];
+}
+
+export type GitHubProj = {
+    id: number;
+    name: string;
+    description?: string;
+}
+
 export type UnsplashProps = {
     random?: boolean;
     photoId?: string;
