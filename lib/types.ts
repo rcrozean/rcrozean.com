@@ -20,10 +20,14 @@ export type GitHub = {
     mine: [{ id: number;
              name: string
              description?: string;
+             html_url: string;
+             languages_url: string;
           }];
     oss: [{ id: number;
             name: string
             description?: string;
+            html_url: string;
+            languages_url: string;
          }];
 }
 

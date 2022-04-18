@@ -14,7 +14,7 @@ export default function GitHubCard() {
     <div className="relative flex">
       <div className="shadow-sm">
         {data?.oss.map((proj) => (
-          <Link href="#">
+          <Link href={proj.html_url}>
             <a className="">{proj.name}</a>
           </Link>
         ))}
