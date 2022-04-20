@@ -1,5 +1,5 @@
-import BlogPostCard from 'components/BlogPostCard';
-import GitHubCard from 'components/GitHubCard';
+import BlogPost from 'components/BlogPost';
+import Projects from 'components/Projects';
 import UnsplashCard from 'components/Unsplash';
 import Head from 'next/head';
 
@@ -12,16 +12,16 @@ export default function Home() {
         <div>Randolph "Cameron" Rozean</div>
         <hr />
         <div className="pb-4">
-          <h1>Featured Blog Posts</h1>
-          <BlogPostCard />
-        </div>
-        <div className="pb-4">
-          <h1>Recent Blog Posts</h1>
-          <BlogPostCard />
-        </div>
-        <div className="pb-4">
           <h1>GitHub Projects</h1>
-          <GitHubCard />
+          <Projects />
+        </div>
+        <div className="hidden pb-4">
+          <h1>Featured Blog Posts</h1>
+          <BlogPost />
+        </div>
+        <div className="hidden pb-4">
+          <h1>Recent Blog Posts</h1>
+          <BlogPost />
         </div>
       </div>
     </Container>

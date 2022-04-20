@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactChild } from 'react';
 import { useTheme } from 'next-themes';
 import NextLink from 'next/link';
 import cn from 'classnames';
