@@ -16,7 +16,7 @@ export default function Projects() {
     <div className="relative flex">
       <div className="shadow-sm">
         {data?.oss.map((proj) => (
-          <GitHubCard>{proj}</GitHubCard>
+          <GitHubCard key={proj.id}>{proj}</GitHubCard>
         ))}
       </div>
     </div>
