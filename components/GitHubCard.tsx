@@ -1,23 +1,12 @@
-import useSWR from 'swr';
-import Link from 'next/link';
-import Image from 'next/image';
+import ExternalLink from './ExternalLink';
 
-import fetcher from 'lib/fetcher';
-import { GitHub } from 'lib/types';
-
-export default function GitHubCard() {
-  const { data, error } = useSWR<GitHub>('/api/github', fetcher);
-
-  if (error) return <div>Error {error}: Failed to load.</div>;
-  if (!data) return <div>Loading...</div>;
+export default function GitHubCard(props) {
+  console.log(props);
+  //const { id, name, description, html_url, languages_url } = props;
   return (
     <div className="relative flex">
       <div className="shadow-sm">
-        {data?.oss.map((proj) => (
-          <Link href={proj.html_url}>
-            <a className="">{proj.name}</a>
-          </Link>
-        ))}
+        <ExternalLink href={html_url}>{name}</ExternalLink>
       </div>
     </div>
   );

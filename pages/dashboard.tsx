@@ -8,11 +8,10 @@ export default function Dashboard() {
         <hr />
         <p>
           This is a placeholder for a personal dashboard for tracking different
-          metrics. I currently haven't decided what to track. I eventually am
-          thinking of tracking GitHub information like contributes to OSS,
-          general GitHub commits (similar to the GitHub dashboard), blog post
-          statitics, and other things I find fun or interesting to track. Check
-          back here for updates.
+          metrics. I currently haven't decided what to track. This is for
+          tracking and statistics of the site and other things I find fun or
+          interesting to track, once the rest of the site is more polished.
+          Check back here for updates.
         </p>
       </div>
     </Container>
