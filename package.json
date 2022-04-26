@@ -6,13 +6,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.0",
     "@tailwindcss/typography": "^0.5.2",
     "classnames": "^2.3.1",
     "googleapis": "^95.0.0",
     "gray-matter": "^4.0.3",
     "mongodb": "^4.5.0",
     "next": "^12.1.5",
-    "next-auth": "^4.3.2",
+    "next-auth": "^4.3.3",
     "next-themes": "0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -22,7 +23,7 @@
   "devDependencies": {
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.5",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.10",
