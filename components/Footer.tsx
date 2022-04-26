@@ -10,7 +10,6 @@ export default function Footer() {
         <div className="grid space-y-4">
           {[
             ['Home', '/'],
-            ['About', '/about'],
             ['Contact', '/contact']
           ].map(([title, url]) => (
             <Link href={url} key={title}>
