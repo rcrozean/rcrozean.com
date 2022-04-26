@@ -1,7 +1,6 @@
 import BlogPost from 'components/BlogPost';
 import Projects from 'components/Projects';
 import UnsplashCard from 'components/Unsplash';
-import Head from 'next/head';
 
 import Container from '../components/Container';
 
