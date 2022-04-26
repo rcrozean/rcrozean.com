@@ -12,7 +12,7 @@ export default function Home() {
         <div>Randolph "Cameron" Rozean</div>
         <hr />
         <div className="pb-4">
-          <h1>GitHub Projects</h1>
+          <h1>Projects</h1>
           <Projects />
         </div>
         <div className="hidden pb-4">
