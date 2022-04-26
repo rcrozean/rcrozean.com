@@ -10,7 +10,8 @@ export default function Footer() {
         <div className="grid space-y-4">
           {[
             ['Home', '/'],
-            ['Contact', '/contact']
+            ['Contact', '/contact'],
+            ['Blog', '/blog']
           ].map(([title, url]) => (
             <Link href={url} key={title}>
               <a className="">{title}</a>
@@ -20,8 +21,7 @@ export default function Footer() {
         <div className="grid space-y-4">
           {[
             ['Guestbook', '/guestbook'],
-            ['Dashboard', '/dashboard'],
-            ['Blog', '/blog']
+            ['Dashboard', '/dashboard']
           ].map(([title, url]) => (
             <Link href={url} key={title}>
               <a className="">{title}</a>
