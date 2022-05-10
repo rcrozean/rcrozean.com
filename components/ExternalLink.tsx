@@ -1,11 +1,17 @@
-const ExternalLink = ({ href, className, children }) => (
+interface Props {
+  href: string;
+  children?: React.ReactChild | React.ReactChild[];
+  className?: string;
+}
+
+const ExternalLink = (props: Props) => (
   <a
-    className={className}
+    className={props.className}
     target="_blank"
     rel="noopener noreferrer"
-    href={href}
+    href={props.href}
   >
-    {children}
+    {props.children}
   </a>
 );
 
