@@ -9,7 +9,7 @@ export default function GitHubCard(props: Repo) {
   return (
     <ExternalLink
       href={repository.html_url}
-      className="flex w-full flex-col items-center rounded-xl border shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 md:max-w-xl md:flex-row"
+      className="flex flex-col items-center rounded-xl border shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 md:w-full md:flex-row"
     >
       <img
         className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"

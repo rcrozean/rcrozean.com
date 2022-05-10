@@ -24,7 +24,7 @@ export default function Projects() {
   return (
     <div className="w-full px-2 py-2 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-sm bg-blue-900/20 p-1">
+        <Tab.List className="flex space-x-1 rounded-sm p-1">
           <Tab
             key="Recent"
             className={({ selected }) =>
@@ -80,7 +80,7 @@ export default function Projects() {
               {repositories.map((repo: GitHubRepo) => (
                 <li
                   key={repo.id}
-                  className="hover:bg-coolGray-100 relative rounded-md p-3 dark:text-black"
+                  className="hover:bg-coolGray-100 relative rounded-md p-3"
                 >
                   <GitHubCard repository={repo} />
                 </li>
