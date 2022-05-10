@@ -50,9 +50,8 @@ export default function Home() {
           </h1>
           <Projects />
         </div>
-        <div className="pb-4">
+        <div className="pb-4 hidden">
           <h1 className="text-2xl font-semibold" id="blogposts">
-            Blog Posts
           </h1>
           <BlogPost />
         </div>
