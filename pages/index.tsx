@@ -1,8 +1,6 @@
 import BlogPost from 'components/BlogPost';
-import ExternalLink from 'components/ExternalLink';
 import Projects from 'components/Projects';
 import UnsplashCard from 'components/Unsplash';
-import Head from 'next/head';
 
 import Container from '../components/Container';
 
@@ -46,14 +44,14 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="pb-4">
+        <div className="w-full pb-4">
           <h1 className="text-2xl font-semibold" id="projects">
             Projects
           </h1>
+          <Projects />
         </div>
-        <div className="pb-4">
+        <div className="pb-4 hidden">
           <h1 className="text-2xl font-semibold" id="blogposts">
-            Blog Posts
           </h1>
           <BlogPost />
         </div>

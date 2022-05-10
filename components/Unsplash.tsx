@@ -2,7 +2,7 @@ import useSWR from 'swr';
 import Image from 'next/image';
 
 import fetcher from 'lib/fetcher';
-import { UnsplashPhoto, UnsplashProps } from 'lib/types';
+import { UnsplashPhoto, UnsplashProps } from 'lib/types/unsplash.types';
 
 export default function UnsplashCard(props: UnsplashProps) {
   if (props.random) {
