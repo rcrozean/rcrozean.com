@@ -1,6 +1,6 @@
 interface Props {
   href: string;
-  children?: React.ReactChild | React.ReactChild[];
+  children?: React.ReactNode;
   className?: string;
 }
 
