@@ -1,5 +1,10 @@
-const ExternalLink = ({ href, children }) => (
-  <a className="" target="_blank" rel="noopener noreferrer" href={href}>
+const ExternalLink = ({ href, className, children }) => (
+  <a
+    className={className}
+    target="_blank"
+    rel="noopener noreferrer"
+    href={href}
+  >
     {children}
   </a>
 );

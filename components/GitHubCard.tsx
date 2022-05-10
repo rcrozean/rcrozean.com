@@ -1,18 +1,27 @@
+import { Repo } from 'lib/types/github.types';
 import ExternalLink from './ExternalLink';
 
-export default function GitHubCard(props) {
-  const { name, description, html_url, languages_url } = props.children;
+import { useState } from 'react';
+
+export default function GitHubCard(props: Repo) {
+  const { repository } = props;
 
   return (
-    <div className="relative mx-auto grid grid-cols-3">
-      <div className="col-span-1">
-        <image></image>
+    <ExternalLink
+      href={repository.html_url}
+      className="flex w-full flex-col items-center rounded-xl border shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 md:max-w-xl md:flex-row"
+    >
+      <img
+        className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+        src=""
+        alt=""
+      />
+      <div className="flex flex-col justify-between p-4 leading-normal">
+        <p className="mb-2 text-2xl font-bold tracking-tight">
+          {repository.name}
+        </p>
+        <p className="mb-3 font-normal">{repository.description}</p>
       </div>
-      <div className="col-span-2 shadow-sm">
-        <ExternalLink href={html_url}>{name}</ExternalLink>
-        <div>{description}</div>
-        <div>languages</div>
-      </div>
-    </div>
+    </ExternalLink>
   );
 }

@@ -1,7 +1,8 @@
-import type { NextApiResponse } from "next";
+import type { NextApiResponse, NextApiRequest } from "next";
 import type { GitHubUser, GitHubRepo } from "../../lib/types/github.types"
 
 export default async function handler(
+    req: NextApiRequest,
     res: NextApiResponse
 ) {
     const userResponse: Response = await fetch('https://api.github.com/users/rcrozean');
@@ -12,7 +13,7 @@ export default async function handler(
 
     const personal: GitHubRepo[] = repositories.filter((repo) => !repo.fork);
     const oss: GitHubRepo[] = repositories.filter((repo) => repo.fork);
-
+    
     res.setHeader(
         'Cache-Control',
         'public, s-maxage=1200, stale-while-revalidate=600'
@@ -20,6 +21,7 @@ export default async function handler(
 
     return res.status(200).json({
         user,
+        repositories,
         personal,
         oss
     });

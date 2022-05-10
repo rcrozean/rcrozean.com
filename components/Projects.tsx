@@ -19,18 +19,18 @@ export default function Projects() {
   if (error) return <div>Error {error}: Failed to load.</div>;
   if (!data) return <div>Loading...</div>;
 
-  let { oss, personal } = data;
+  let { repositories, personal, oss } = data;
 
   return (
-    <div className="">
+    <div className="w-full px-2 py-2 sm:px-0">
       <Tab.Group>
-        <Tab.List className="">
+        <Tab.List className="flex space-x-1 rounded-sm bg-blue-900/20 p-1">
           <Tab
             key="Recent"
             className={({ selected }) =>
               classNames(
                 'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
-                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                '',
                 selected
                   ? 'bg-white shadow'
                   : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
@@ -70,103 +70,55 @@ export default function Projects() {
         </Tab.List>
         <Tab.Panels className="mt-2">
           <Tab.Panel
-            key="recent"
+            key="Recent"
             className={classNames(
-              'rounded-xl bg-white p-3',
+              'rounded-xl p-3',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
             )}
           >
             <ul>
-              {oss.map((post: GitHubRepo) => (
+              {repositories.map((repo: GitHubRepo) => (
                 <li
-                  key={post.id}
-                  className="hover:bg-coolGray-100 relative rounded-md p-3"
+                  key={repo.id}
+                  className="hover:bg-coolGray-100 relative rounded-md p-3 dark:text-black"
                 >
-                  <h3 className="text-sm font-medium leading-5">{post.name}</h3>
-
-                  <ul className="">
-                    <li>{post.description}</li>
-                    <li>&middot;</li>
-                    <li>{post.html_url} comments</li>
-                    <li>&middot;</li>
-                    <li>{post.languages_url} shares</li>
-                  </ul>
-
-                  <a
-                    href="#"
-                    className={classNames(
-                      'absolute inset-0 rounded-md',
-                      'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                    )}
-                  />
+                  <GitHubCard repository={repo} />
                 </li>
               ))}
             </ul>
           </Tab.Panel>
           <Tab.Panel
-            key="oss"
+            key="OSS"
             className={classNames(
-              'rounded-xl bg-white p-3',
+              'rounded-xl p-3',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
             )}
           >
             <ul>
-              {oss.map((post: GitHubRepo) => (
+              {oss.map((repo: GitHubRepo) => (
                 <li
-                  key={post.id}
+                  key={repo.id}
                   className="hover:bg-coolGray-100 relative rounded-md p-3"
                 >
-                  <h3 className="text-sm font-medium leading-5">{post.name}</h3>
-
-                  <ul className="">
-                    <li>{post.description}</li>
-                    <li>&middot;</li>
-                    <li>{post.html_url} comments</li>
-                    <li>&middot;</li>
-                    <li>{post.languages_url} shares</li>
-                  </ul>
-
-                  <a
-                    href="#"
-                    className={classNames(
-                      'absolute inset-0 rounded-md',
-                      'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                    )}
-                  />
+                  <GitHubCard repository={repo} />
                 </li>
               ))}
             </ul>
           </Tab.Panel>
           <Tab.Panel
-            key="personal"
+            key="Personal"
             className={classNames(
-              'rounded-xl bg-white p-3',
+              'rounded-xl p-3',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
             )}
           >
             <ul>
-              {personal.map((post: GitHubRepo) => (
+              {personal.map((repo: GitHubRepo) => (
                 <li
-                  key={post.id}
+                  key={repo.id}
                   className="hover:bg-coolGray-100 relative rounded-md p-3"
                 >
-                  <h3 className="text-sm font-medium leading-5">{post.name}</h3>
-
-                  <ul className="text-coolGray-500 mt-1 flex space-x-1 text-xs font-normal leading-4">
-                    <li>{post.description}</li>
-                    <li>&middot;</li>
-                    <li>{post.html_url} comments</li>
-                    <li>&middot;</li>
-                    <li>{post.languages_url} shares</li>
-                  </ul>
-
-                  <a
-                    href="#"
-                    className={classNames(
-                      'absolute inset-0 rounded-md',
-                      'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                    )}
-                  />
+                  <GitHubCard repository={repo} />
                 </li>
               ))}
             </ul>

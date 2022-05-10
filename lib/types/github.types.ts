@@ -1,6 +1,11 @@
 //GitHub Types
+export type Repo = {
+    repository: GitHubRepo;
+}
+
 export type GitHub = {
     user: GitHubUser;
+    repositories: GitHubRepo[];
     personal: GitHubRepo[];
     oss: GitHubRepo[];
 }
